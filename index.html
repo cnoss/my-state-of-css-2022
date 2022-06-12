@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./assets/styles/example-cascade-layers.css"/>
     <link rel="stylesheet" href="./assets/styles/example-subgrid.css"/>
     <link rel="stylesheet" href="./assets/styles/example-aspect-ratio.css"/>
+    <link rel="stylesheet" href="./assets/styles/example-container-queries.css"/>
     <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
   </head>
@@ -27,7 +28,25 @@
         <ul>
           <li><a href="#cascade-layers">Cascade Layers</a></li>
           <li><a href="#css-subgrid">Subgrid</a></li>
+          <li><a href="#aspect-ratio">Aspect Ratio & Object Fit</a></li>
+          <li><a href="#container-queries">Container Queries</a></li>
         </ul>
+
+        <!--div class="card-wrap">
+          <figure class="card">
+            <img src="./images/james-isaac.jpg" alt="James Isaac" />
+            <figcaption>
+              <header class="card-header">
+                <h2>James Isaac</h2>
+                <p>The Shy Basketball Lover</p>
+              </header>
+              <blockquote>
+                When I’m playing basketball, I forget everything around me. It’s
+                just me or me and the team. It’s a liberating feeling.
+              </blockquote>
+            </figcaption>
+          </figure>
+        </div-->
       </div>
     </header>
 
@@ -226,7 +245,7 @@
 
         <div class="usable-indicator">
           <span class="icon">sentiment_very_satisfied</span>
-          <p>Aspect-Ratio ist in <a href=" https://caniuse.com/mdn-css_properties_aspect-ratio">fast allen aktuellen Browsern implementiert (globale Verfügbarkeit 86.51%)</a> und kann für professionellen Einsatz genutzt werden. Object-fit hat derzeit eine <a href="https://caniuse.com/?search=object-fit">globale Verfügbarkeit von ca. 95%</a></p>
+          <p>Aspect-Ratio ist in <a href="https://caniuse.com/mdn-css_properties_aspect-ratio">fast allen aktuellen Browsern implementiert (globale Verfügbarkeit 86.51%)</a> und kann für professionellen Einsatz genutzt werden. Object-fit hat derzeit eine <a href="https://caniuse.com/?search=object-fit">globale Verfügbarkeit von ca. 95%</a></p>
         </div>
        
         <ul class="further-readings">
@@ -236,83 +255,132 @@
           <li><a href="https://css-tricks.com/almanac/properties/o/object-fit/">object-fit</a>, Robin Rendle @CSS Tricks, besucht am 11. Juni 2022</li>
         </ul>
       </section>
-<!--
-      <figure class="card">
-        <img src="./images/anna-smith.jpg" alt="Anna Smith"/>
-        <span class="icon">favorite</span>
-        <figcaption>
-          <header class="card-header">
-            <h2>Anna Smith</h2>
-            <p>The Anime Fan</p>
-          </header>
-          <blockquote>
-            While I love computer science, pop culture and anime, I equally
-            enjoy partying and doing sports with my friends.
-          </blockquote>
-        </figcaption>
-      </figure>
 
-      <figure class="card">
-        <img src="./images/james-isaac.jpg" alt="James Isaac" />
-        <figcaption>
-          <header class="card-header">
-            <h2>James Isaac</h2>
-            <p>The Shy Basketball Lover</p>
-          </header>
-          <blockquote>
-            When I’m playing basketball, I forget everything around me. It’s
-            just me or me and the team. It’s a liberating feeling.
-          </blockquote>
-        </figcaption>
-      </figure>
+<!-- Container Queries
+########################################################################### -->
+      <section id="container-queries">
+        <h2>Container Queries</h2>
+        <div class="teaser">
+          <p>
+            Media-queries allow an author to make style changes based on the overall viewport dimensions – but in many cases, authors would prefer styling modular components based on their context within a layout. 
 
-      <figure class="card">
-        <img src="./images/laura-koch.jpg" alt="Laura Koch" />
-        <figcaption>
-          <header class="card-header">
-            <h2>Laura Koch</h2>
-            <p>Jogger</p>
-          </header>
-          <blockquote>
-            I love to do sports in my free time. But I feel lonely and want to
-            meet people who I can talk to on my walks.
-          </blockquote>
-        </figcaption>
-      </figure>
+            <cite><a href="https://www.miriamsuzanne.com/2021/05/02/container-queries/">Miriam Eric Suzanne in Container Queries, Explainer & Proposal</a></cite>
+          </p>
+        </div>
+        
+        <div class="example example-container-queries">
+          <div class="card-wrap">
+            <figure class="card">
+              <img src="./images/anna-smith.jpg" alt="Anna Smith"/>
+              <span class="icon">favorite</span>
+              <figcaption>
+                <header class="card-header">
+                  <h2>Anna Smith</h2>
+                  <p>The Anime Fan</p>
+                </header>
+                <blockquote>
+                  While I love computer science, pop culture and anime, I equally
+                  enjoy partying and doing sports with my friends.
+                </blockquote>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="card-wrap">
+            <figure class="card">
+              <img src="./images/james-isaac.jpg" alt="James Isaac" />
+              <figcaption>
+                <header class="card-header">
+                  <h2>James Isaac</h2>
+                  <p>The Shy Basketball Lover</p>
+                </header>
+                <blockquote>
+                  When I’m playing basketball, I forget everything around me. It’s
+                  just me or me and the team. It’s a liberating feeling.
+                </blockquote>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="card-wrap">
+            <figure class="card">
+              <img src="./images/laura-koch.jpg" alt="Laura Koch" />
+              <figcaption>
+                <header class="card-header">
+                  <h2>Laura Koch</h2>
+                  <p>Jogger</p>
+                </header>
+                <blockquote>
+                  I love to do sports in my free time. But I feel lonely and want to
+                  meet people who I can talk to on my walks.
+                </blockquote>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="card-wrap">
+            <figure class="card">
+              <img src="./images/matthias-zweig.jpg" alt="Matthias Zweig" />
+              <figcaption>
+                <header class="card-header">
+                  <h2>Matthias Zweig</h2>
+                  <p>The hockey enthusiast</p>
+                </header>
+                <blockquote>
+                  I am a long-time fan of my local hockey club. Now I would like to
+                  play myself. But I don't dare sign up for a team because I think the
+                  hurdles are too big.
+                </blockquote>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="card-wrap">
+            <figure class="card">
+              <img
+                  src="./images/sandra-diedrich.jpg"
+                  alt="Sandra Diedrich"
+                />
+              <figcaption>
+                <header class="card-header">
+                  <h2>Sandra Diedrich</h2>
+                  <p>The longtime handball player</p>
+                </header>
+                <blockquote>
+                  Since I've been studying, I don't find the time to play in a club
+                  any more. I think it would still be nice to play with friends from
+                  time to time.
+                </blockquote>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
 
-      <figure class="card">
-        <img src="./images/matthias-zweig.jpg" alt="Matthias Zweig" />
-        <figcaption>
-          <header class="card-header">
-            <h2>Matthias Zweig</h2>
-            <p>The hockey enthusiast</p>
-          </header>
-          <blockquote>
-            I am a long-time fan of my local hockey club. Now I would like to
-            play myself. But I don't dare sign up for a team because I think the
-            hurdles are too big.
-          </blockquote>
-        </figcaption>
-      </figure>
+        <code class="language-css"><pre>
+          
+.card-wrap {
+  container-name: grid-element;
+  container-type: inline-size;
+}
 
-      <figure class="card">
-        <img
-            src="./images/sandra-diedrich.jpg"
-            alt="Sandra Diedrich"
-          />
-        <figcaption>
-          <header class="card-header">
-            <h2>Sandra Diedrich</h2>
-            <p>The longtime handball player</p>
-          </header>
-          <blockquote>
-            Since I've been studying, I don't find the time to play in a club
-            any more. I think it would still be nice to play with friends from
-            time to time.
-          </blockquote>
-        </figcaption>
-      </figure>
-    -->
+@container grid-element (min-width: 400px) {
+  .card {
+    display: flex;
+  }
+
+  .card img {
+    width: 50%;
+  }
+}
+          </pre></code>
+
+        <div class="usable-indicator">
+          <span class="icon">sentiment_dissatisfied</span>
+          <p>Container Queries sind derzeit nur in <a href="https://caniuse.com/css-container-queries">Tech Previews verfügbar</a> und können daher nur für Experimente eingesetzt werden, sollen aber 2022 in den großen Browsern verfügbar sein. Man darf gespannt sein.</p>
+        </div>
+     
+        <ul class="further-readings">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Container_Queries">CSS Container Queries</a>, mdn Webdocs, besucht am 12. Juni 2022</li>
+          <li><a href="https://css-tricks.com/say-hello-to-css-container-queries/">Say Hello to CSS Container Queries</a>, Robin Rendle @CSS Tricks, besucht am 12. Juni 2022</li>
+          <li><a href="https://www.miriamsuzanne.com/2021/05/02/container-queries/">Container Queries, Explainer & Proposal</a>, Miriam Eric Suzanne, besucht am 12. Juni 2022</li>
+        </ul>
+      </section>
     </main>
   </body>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>

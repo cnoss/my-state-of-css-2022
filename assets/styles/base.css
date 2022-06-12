@@ -7,7 +7,6 @@ html {
 }
 
 body {
-  background-color: var(--lighter);
   color: var(--color-text);
   font-family: var(--ff-normal);
   font-size: var(--m);
@@ -16,7 +15,7 @@ body {
   line-height: var(--lh-normal);
 }
 
-@media (min-width: 40em) {
+@media (min-width: 700px) {
   body {
     display: grid;
     grid-template-columns: 20em 1fr;

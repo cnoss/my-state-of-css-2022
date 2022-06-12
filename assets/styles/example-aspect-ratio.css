@@ -4,8 +4,20 @@
   gap: var(--m);
 }
 
-.example-aspect-ratio > * {
-  max-width: 30rem;
+.example-aspect-ratio > figure {
+  display: grid;
+  gap: var(--m);
+  grid-template-columns: 1fr 1fr;
+}
+
+.example-aspect-ratio > figure > figcaption {
+  display: flex;
+  align-items: center;
+  background-color: var(--lighter);
+}
+
+.example-aspect-ratio > figure > figcaption code > pre {
+  background-color: transparent;
 }
 
 .example-aspect-ratio .shoutout {

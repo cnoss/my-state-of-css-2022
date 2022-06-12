@@ -68,6 +68,6 @@ li {
 
 code pre {
   padding: 0 var(--m);
-  background-color: rgb(0 0 0 / 3%);
+  background-color: var(--lighter);
   font-family: var(--ff-code);
 }

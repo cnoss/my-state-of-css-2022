@@ -1,0 +1,33 @@
+.example-color-mix {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m);
+}
+
+.example-color-mix .example-visual {
+  min-height: 5em;
+}
+
+.example-color-mix .single-color {
+  background-color: color-mix(in srgb, red 50%, yellow);
+}
+
+.example-color-mix .single-color.r-b {
+  background-color: color-mix(in srgb, red 50%, blue);
+}
+
+.example-color-mix .single-color.base {
+  background-color: #d16;
+}
+
+.example-color-mix .single-color.lighten {
+  background-color: color-mix(in srgb, #d16 70%, white);
+}
+
+.example-color-mix .single-color.darken {
+  background-color: color-mix(in srgb, #d16 70%, black);
+}
+
+.example-color-mix .single-color.alpha {
+  background-color: color-mix(in srgb, #d16 70%, rgb(255 255 255 / 50%));
+}

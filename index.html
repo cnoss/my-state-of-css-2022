@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="./assets/styles/example-container-queries.css"/>
     <link rel="stylesheet" href="./assets/styles/example-accent-color.css"/>
     <link rel="stylesheet" href="./assets/styles/example-hwb.css"/>
+    <link rel="stylesheet" href="./assets/styles/example-color-mix.css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
   </head>
   <body>
@@ -542,6 +543,7 @@ background-color: hwb(240deg 50% 80%);</pre></code>
             </div>
           </div>
         </div>
+
         <div class="usable-indicator">
           <span class="icon">sentiment_satisfied</span>
           <p>Das HWB color model hat derzeit eine <a href="https://caniuse.com/?search=hwb">globale Verfügbarkeit von ca. 78%</a> und kann für den professionellen Einsatz in Erwägung gezogen werden.</p>
@@ -549,12 +551,86 @@ background-color: hwb(240deg 50% 80%);</pre></code>
      
         <ul class="further-readings">
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hwb">hwb()</a>, mdn Webdocs, besucht am 12. Juni 2022</li>
-          <li><a href="https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/#hwb">https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/#hwb</a>, Michelle Barker @CSS Tricks, besucht am 12. Juni 2022</li>
+          <li><a href="https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/#hwb">A Guide To Modern CSS Colors With RGB, HSL, HWB, LAB And LCH</a>, Michelle Barker @CSS Tricks, besucht am 12. Juni 2022</li>
           <li><a href="https://www.stefanjudis.com/blog/hwb-a-color-notation-for-humans/">hwb() – a color notation for humans?</a>, Stefan Judis, besucht am 12. Juni 2022</li>
           
         </ul>
       </section>
 
+<!-- Color Mix
+########################################################################### -->
+      <section id="color-mix">
+        <h2>Color Mix</h2>
+
+        <div class="teaser">
+          <p>
+           Defining a color palette and theme can be a lot of work, especially when considering contextual colors for elements’ various states. While CSS color-mix() only blends two colors together, this little function may be the key to maximizing your colors without maximum effort.
+          <cite><a href="https://www.smashingmagazine.com/2022/06/simplify-color-palette-css-color-mix/"> Daniel Yuschick at CSS Tricks</a></cite>
+          </p>
+        </div>
+
+        <div class="example example-color-mix">
+          <div class="example-pair">
+            <div class="example-visual single-color">
+            </div>
+            <div class="example-code">
+              <code class="language-css"><pre>
+background-color: color-mix(in srgb, red 50%, yellow);</pre></code>
+            </div>
+          </div>
+          <div class="example-pair">
+            <div class="example-visual single-color r-b">
+            </div>
+            <div class="example-code">
+              <code class="language-css"><pre>
+background-color: color-mix(in srgb, red 50%, blue);</pre></code>
+            </div>
+          </div>
+          <div class="example-pair">
+            <div class="example-visual single-color base">
+            </div>
+            <div class="example-code">
+              <code class="language-css"><pre>
+background-color: #d16;</pre></code>
+            </div>
+          </div>
+          <div class="example-pair">
+            <div class="example-visual single-color lighten">
+            </div>
+            <div class="example-code">
+              <code class="language-css"><pre>
+background-color: color-mix(in srgb, #d16 70%, white);</pre></code>
+            </div>
+          </div>
+          <div class="example-pair">
+            <div class="example-visual single-color darken">
+            </div>
+            <div class="example-code">
+              <code class="language-css"><pre>
+background-color: color-mix(in srgb, #d16 70%, black);</pre></code>
+            </div>
+          </div>
+          <div class="example-pair">
+            <div class="example-visual single-color alpha">
+            </div>
+            <div class="example-code">
+              <code class="language-css"><pre>
+background-color: color-mix(in srgb, #d16 70%, 
+  rgb(255 255 255 / 50%));</pre></code>
+            </div>
+          </div>
+        </div>
+
+        <div class="usable-indicator">
+          <span class="icon">sentiment_dissatisfied</span>
+          <p>Color Mix isr derzeit nur in <a href="https://caniuse.com/mdn-css_types_color_color-mix">Tech Previews verfügbar</a> und kann daher nur für Experimente eingesetzt werden. Die Funktion soll aber 2022 in den großen Browsern verfügbar sein.</p>
+        </div>
+
+        <ul class="further-readings">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix">color-mix()</a>, mdn Webdocs, besucht am 12. Juni 2022</li>
+          <li><a href="https://www.smashingmagazine.com/2022/06/simplify-color-palette-css-color-mix/">Simplify Your Color Palette With CSS Color-Mix()</a>, Daniel Yuschick @CSS Tricks, besucht am 12. Juni 2022</li>          
+        </ul>
+      </section>
     </main>
   </body>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>

@@ -16,8 +16,7 @@
     <link rel="stylesheet" href="./assets/styles/example-subgrid.css"/>
     <link rel="stylesheet" href="./assets/styles/example-aspect-ratio.css"/>
     <link rel="stylesheet" href="./assets/styles/example-container-queries.css"/>
-    <link rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
   </head>
   <body>
     <header class="main-header">
@@ -32,21 +31,26 @@
           <li><a href="#container-queries">Container Queries</a></li>
         </ul>
 
-        <!--div class="card-wrap">
-          <figure class="card">
-            <img src="./images/james-isaac.jpg" alt="James Isaac" />
-            <figcaption>
-              <header class="card-header">
-                <h2>James Isaac</h2>
-                <p>The Shy Basketball Lover</p>
-              </header>
-              <blockquote>
-                When I’m playing basketball, I forget everything around me. It’s
-                just me or me and the team. It’s a liberating feeling.
-              </blockquote>
-            </figcaption>
-          </figure>
-        </div-->
+        <div class="additional-content" data-additional-content="is-hidden">
+          <div class="additional-content-handle icon-after">
+            
+          </div>
+          <div class="card-wrap">
+            <figure class="card">
+              <img src="./images/james-isaac.jpg" alt="James Isaac" />
+              <figcaption>
+                <header class="card-header">
+                  <h2>James Isaac</h2>
+                  <p>The Shy Basketball Lover</p>
+                </header>
+                <blockquote>
+                  When I’m playing basketball, I forget everything around me. It’s
+                  just me or me and the team. It’s a liberating feeling.
+                </blockquote>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -385,8 +389,15 @@
   </body>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
   <script>
-    document.querySelectorAll('code > pre').forEach(el => {
-      // then highlight each
-      hljs.highlightElement(el);
-    });</script>
+    document.querySelectorAll('code > pre').forEach(ele => {
+      hljs.highlightElement(ele);
+    });
+
+    document.querySelectorAll('[data-additional-content]').forEach(ele => {
+      ele.addEventListener('click', (ele)=>{
+        const target = ele.target.closest('[data-additional-content]');
+        target.dataset.additionalContent = target.dataset.additionalContent === 'is-visible' ? 'is-hidden' : 'is-visible';
+      });
+    });
+    </script>
 </html>

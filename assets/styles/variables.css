@@ -45,5 +45,6 @@
   --border-width-s: 1px;
   --border-width-m: 3px;
   --radius-m: var(--m);
+  --radius-s: 3px;
   --tile-width: 20em;
 }

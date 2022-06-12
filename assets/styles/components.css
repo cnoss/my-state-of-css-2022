@@ -38,3 +38,32 @@
   font-size: var(--m);
   text-align: right;
 }
+
+/* Additional Content
+###########################################################################  */
+.additional-content > *:not(.additional-content-handle) {
+  display: none;
+}
+
+.additional-content[data-additional-content="is-visible"] > *:not(.additional-content-handle) {
+  display: block;
+}
+
+.additional-content[data-additional-content="is-visible"] > .additional-content-handle::after {
+  content: "visibility_off";
+}
+
+.additional-content-handle {
+  padding-bottom: var(--m);
+  opacity: var(--op-light);
+  transition: opacity var(--tr-fast);
+}
+
+.additional-content-handle::after {
+  content: "visibility";
+}
+
+.additional-content-handle:hover {
+  cursor: pointer;
+  opacity: 1;
+}

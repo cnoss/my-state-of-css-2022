@@ -6,7 +6,6 @@
   margin-right: 0.5rem;
   direction: ltr;
   font-family: var(--ff-icons);
-  font-family: var(--ff-icons);
   font-feature-settings: "liga";
   font-size: 24px;  /* Preferred icon size */
   -webkit-font-smoothing: antialiased;
@@ -17,6 +16,27 @@
   line-height: inherit;
   text-rendering: optimizelegibility;
   text-transform: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.icon-after {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  margin-right: 0.5rem;
+  direction: ltr;
+  font-family: var(--ff-icons);
+  font-feature-settings: "liga";
+  font-size: 24px;  /* Preferred icon size */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: inherit;
+  text-rendering: optimizelegibility;
   text-transform: none;
   vertical-align: middle;
   white-space: nowrap;

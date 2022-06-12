@@ -16,12 +16,6 @@
   }
 }
 
-@container section (min-width: 1000px) {
-  .example-container-queries {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
 .card-wrap {
   container-name: grid-element;
   container-type: inline-size;

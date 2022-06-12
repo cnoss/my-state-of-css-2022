@@ -1,0 +1,111 @@
+/* Card
+###########################################################################  */
+
+.card {
+  z-index: 10;
+  display: block;
+  overflow: hidden;
+  max-width: 40em;
+  background-color: var(--darkest);
+  transition: all var(--tr-fast);
+}
+
+@media (min-width: 20em) {
+  .card {
+    margin: var(--l);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow-l);
+  }
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.card {
+  position: relative;
+}
+
+.card figcaption {
+  padding: var(--m);
+  padding-bottom: var(--xl);
+  color: white;
+}
+
+.card h2 {
+  margin-bottom: var(--half);
+  font-size: var(--l);
+}
+
+.card blockquote {
+  font-family: var(--ff-serif);
+}
+
+.card:focus {
+  z-index: 0;
+}
+
+.card-header {
+  padding-bottom: var(--s);
+}
+
+.card .icon {
+  position: absolute;
+  top: var(--m);
+  left: var(--m);
+  color: var(--color-fav);
+}
+
+.card:hover .icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: var(--color-fav);
+  color: var(--lightest);
+}
+
+@container (min-width: 40em) {
+  .card {
+    display: flex;
+  }
+
+  .card img {
+    width: 50%;
+  }
+}
+
+/* Main Header
+###########################################################################  */
+
+.main-header__content {
+  position: sticky;
+  top: 0;
+  padding: var(--m);
+}
+
+/* Usable Indicator
+###########################################################################  */
+
+.usable-indicator {
+  display: flex;
+  align-items: center;
+  padding: var(--xs);
+  border-top: solid var(--border-width-m) var(--darken);
+  border-bottom: solid var(--border-width-m) var(--darken);
+  line-height: var(--lh-tight);
+}
+
+/* Example
+###########################################################################  */
+
+.example {
+  margin-bottom: var(--xxl);
+}

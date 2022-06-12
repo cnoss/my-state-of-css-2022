@@ -1,0 +1,46 @@
+.example-aspect-ratio {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m);
+}
+
+.example-aspect-ratio > * {
+  max-width: 30rem;
+}
+
+.example-aspect-ratio .shoutout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--xl);
+  background-color: var(--color-accent);
+  border-radius: var(--radius-m);
+  color: var(--lightest);
+  font-size: var(--xxl);
+}
+
+.aspect-ratio-2-1 {
+  border: solid var(--border-width-m) var(--dark);
+  aspect-ratio: 2/1;
+  transition: all var(--tr-medium);
+}
+
+.aspect-ratio-2-1:hover {
+  aspect-ratio: 1/1;
+}
+
+.o-f-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.o-f-contain {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.o-p-bottom {
+  object-position: bottom;
+}

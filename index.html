@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CSS Layouts</title>
+    <link rel="stylesheet" href="./assets/styles/reset.css"/>
+    <link rel="stylesheet" href="./assets/styles/fonts.css"/>
+    <link rel="stylesheet" href="./assets/styles/icons.css"/>
+    <link rel="stylesheet" href="./assets/styles/variables.css"/>
+    <link rel="stylesheet" href="./assets/styles/base.css"/>
+    <link rel="stylesheet" href="./assets/styles/layouts.css"/>
+    <link rel="stylesheet" href="./assets/styles/components.css"/>
+    <link rel="stylesheet" href="./assets/styles/example-cascade-layers.css"/>
+    <link rel="stylesheet" href="./assets/styles/example-subgrid.css"/>
+    <link rel="stylesheet" href="./assets/styles/example-aspect-ratio.css"/>
+    <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="main-header__content">
+        <h1>State of CSS</h1>
+        <p>ein paar neuere CSS Features, Stand 06.2022</p>
+
+        <ul>
+          <li><a href="#cascade-layers">Cascade Layers</a></li>
+          <li><a href="#css-subgrid">Subgrid</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+
+<!-- Cascade Layers
+################################################################### -->
+      <section id="cascade-layers">
+        <h2>Cascade Layers</h2>
+
+        <div class="teaser">
+          <p>
+            The @layer CSS at-rule is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
+          </p>
+        </div>
+
+        <code class="language-css"><pre>
+            
+@layer base, theme;
+
+@layer base {
+  .card {
+    …
+  }
+}
+
+@layer base {
+  .card {
+    …
+  }
+}
+
+@layer theme {
+  .card {
+    …
+  }
+}
+        </pre></code>
+
+        <div class="usable-indicator">
+          <span class="icon">sentiment_very_satisfied</span>
+          <p>Das Feature ist in <a href="https://caniuse.com/?search=layer">den meisten aktuellen Browsern implementiert</a> und kann für professionellen Einsatz in Betracht gezogen werden.</p>
+        </div>
+
+        <ul class="further-readings">
+          <li><a href="https://www.w3.org/2021/10/TPAC/demos/css-architecture.html">Improving CSS Architecture with Cascade Layers, Container Queries, Scope</a>, Miriam Suzanne, besucht am 09. Juni 2022</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@layer">@layer</a>, mdn Webdocs, besucht am 09. Juni 2022</li>
+          <li><a href="https://css-tricks.com/css-cascade-layers/">A Complete Guide to CSS Cascade Layers</a>, CSS-Tricks von Miriam Suzanne, besucht am 09. Juni 2022</li>
+        </ul>
+      </section>
+
+<!-- CSS Subgrid
+################################################################### -->
+        <section id="css-subgrid">
+          <h2>CSS Subgrid</h2>
+  
+          <div class="teaser">
+            <p>
+              CSS Grid wirkt sich nur auf die direkten Kind-Elemente des Grid-Containters aus. Mit Subgrid können tiefer verschachtelte Ebenen am Raster ausgerichtet werden. 
+            </p>
+          </div>
+  
+          <div class="example example-subgrid">
+            <div class="grid-container">
+              <figure class="grid-element">
+                <img src="//unsplash.it/400" alt="Placeholder Image">
+                <figcaption>
+                  <h3>Lorem ipsum dolor sit amet consecteturadipisicing elit.</h3>
+                  <p>Voluptate molestiae blanditiis provident voluptates modi perspiciatis in libero cum sint temporibus delectus minima, ipsam mollitia dicta quam asperiores quo necessitatibus veritatis. Modi perspiciatis in libero cum sint temporibus delectus minima.</p>
+                </figcaption>
+              </figure>
+              
+              <figure class="grid-element">
+                <img src="//unsplash.it/401" alt="Placeholder Image">
+                <figcaption>
+                  <h3>Consectetur adipisicing elit.</h3>
+                  <p> Officia nihil sapiente error facilis omnis officiis cupiditate, ea consequuntur ut at dolorum nostrum aliquam adipisci voluptatum consectetur delectus.</p>
+                </figcaption>
+              </figure>
+              
+              <figure class="grid-element">
+                <img src="//unsplash.it/402" alt="Placeholder Image">
+                <figcaption>
+                  <h3>Vel minus, rem, totam perferendis</h3>
+                  <p>Sequi nulla sintdelectus commodi quaerat iusto in, velit expedita odit, at dolores hic cumque accusantium. Ullam necessitatibus temporibus libero commodi placeat?</p>
+                </figcaption>
+              </figure>
+              
+              <figure class="grid-element">
+                <img src="//unsplash.it/403" alt="Placeholder Image">
+                <figcaption>
+                  <h3>Quaerat deleniti ducimus quasi numquam?</h3>
+                  <p>Alias, perferendis! Voluptatem facere fuga unde dolores ex quos, tenetur sint culpa dignissimos provident tempora, fugiat pariatur doloribus a. Velit, voluptatibus vel.</p>
+                </figcaption>
+              </figure>
+  
+            </div>
+          </div>
+  
+          <code class="language-css"><pre>
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-element {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: span 2;
+}
+          </pre></code>
+  
+          <div class="usable-indicator">
+            <span class="icon">sentiment_neutral</span>
+            <p>Das Feature ist bislang nur in <a href="https://caniuse.com/css-subgrid">Safari und Firefox</a> implementiert.</p>
+          </div>
+        
+          <ul class="further-readings">
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid">Subgrid</a>, mdn Webdocs, besucht am 09. Juni 2022</li>
+            <li><a href="https://ishadeed.com/article/learn-css-subgrid/">Learn CSS Subgrid</a>, Ahmad Shadeed, besucht am 09. Juni 2022</li>
+          </ul>
+        </section>
+
+<!-- Aspect Ratio
+########################################################################### -->
+      <section id="aspect-ratio">
+        <h2>Aspect Ratio & Object Fit</h2>
+
+        <div class="teaser">
+          <p>
+            The aspect-ratio CSS property sets a preferred aspect ratio for the box, which will be used in the calculation of auto sizes and some other layout functions. 
+          </p>
+        </div>
+
+        <div class="example example-aspect-ratio">
+          <figure>
+            <p class="shoutout aspect-ratio-2-1">Aspect Ratio für Container</p>
+            <figcaption>
+              <code class="language-css"><pre>
+
+.aspect-ratio-2-1{
+  aspect-ratio: 2/1;
+}
+              </pre></code>
+            </figcaption>
+          </figure>
+            
+          <figure>
+            <img src="//unsplash.it/id/1060/401" alt="Placeholder Image" class="aspect-ratio-2-1">
+          </figure>
+            
+          <figure>
+            <img src="//unsplash.it/id/1060/401" alt="Placeholder Image" class="aspect-ratio-2-1 o-f-cover">
+            <figcaption>
+              <code class="language-css"><pre>
+                
+.aspect-ratio-2-1{
+  aspect-ratio: 2/1;
+}
+
+.o-f-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+              </pre></code>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="//unsplash.it/id/1060/401" alt="Placeholder Image" class="aspect-ratio-2-1 o-f-cover o-p-bottom">
+            <figcaption>
+              <code class="language-css"><pre>
+                
+.o-p-bottom{
+  object-position: bottom;
+}
+              </pre></code>
+            </figcaption>
+          </figure>
+            
+
+        </div>
+
+
+        <div class="usable-indicator">
+          <span class="icon">sentiment_very_satisfied</span>
+          <p>Aspect-Ratio ist in <a href=" https://caniuse.com/mdn-css_properties_aspect-ratio">fast allen aktuellen Browsern implementiert (globale Verfügbarkeit 86.51%)</a> und kann für professionellen Einsatz genutzt werden. Object-fit hat derzeit eine <a href="https://caniuse.com/?search=object-fit">globale Verfügbarkeit von ca. 95%</a></p>
+        </div>
+       
+        <ul class="further-readings">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">aspect-ratio</a>, mdn Webdocs, besucht am 11. Juni 2022</li>
+          <li><a href="https://css-tricks.com/almanac/properties/a/aspect-ratio/">aspect-ratio</a>, Geoff Graham @CSS Tricks, besucht am 11. Juni 2022</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit">object-fit</a>, mdn Webdocs, besucht am 11. Juni 2022</li>
+          <li><a href="https://css-tricks.com/almanac/properties/o/object-fit/">object-fit</a>, Robin Rendle @CSS Tricks, besucht am 11. Juni 2022</li>
+        </ul>
+      </section>
+<!--
+      <figure class="card">
+        <img src="./images/anna-smith.jpg" alt="Anna Smith"/>
+        <span class="icon">favorite</span>
+        <figcaption>
+          <header class="card-header">
+            <h2>Anna Smith</h2>
+            <p>The Anime Fan</p>
+          </header>
+          <blockquote>
+            While I love computer science, pop culture and anime, I equally
+            enjoy partying and doing sports with my friends.
+          </blockquote>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="./images/james-isaac.jpg" alt="James Isaac" />
+        <figcaption>
+          <header class="card-header">
+            <h2>James Isaac</h2>
+            <p>The Shy Basketball Lover</p>
+          </header>
+          <blockquote>
+            When I’m playing basketball, I forget everything around me. It’s
+            just me or me and the team. It’s a liberating feeling.
+          </blockquote>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="./images/laura-koch.jpg" alt="Laura Koch" />
+        <figcaption>
+          <header class="card-header">
+            <h2>Laura Koch</h2>
+            <p>Jogger</p>
+          </header>
+          <blockquote>
+            I love to do sports in my free time. But I feel lonely and want to
+            meet people who I can talk to on my walks.
+          </blockquote>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="./images/matthias-zweig.jpg" alt="Matthias Zweig" />
+        <figcaption>
+          <header class="card-header">
+            <h2>Matthias Zweig</h2>
+            <p>The hockey enthusiast</p>
+          </header>
+          <blockquote>
+            I am a long-time fan of my local hockey club. Now I would like to
+            play myself. But I don't dare sign up for a team because I think the
+            hurdles are too big.
+          </blockquote>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img
+            src="./images/sandra-diedrich.jpg"
+            alt="Sandra Diedrich"
+          />
+        <figcaption>
+          <header class="card-header">
+            <h2>Sandra Diedrich</h2>
+            <p>The longtime handball player</p>
+          </header>
+          <blockquote>
+            Since I've been studying, I don't find the time to play in a club
+            any more. I think it would still be nice to play with friends from
+            time to time.
+          </blockquote>
+        </figcaption>
+      </figure>
+    -->
+    </main>
+  </body>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script>
+    document.querySelectorAll('code > pre').forEach(el => {
+      // then highlight each
+      hljs.highlightElement(el);
+    });</script>
+</html>

@@ -1,0 +1,25 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--lightest);
+  container-type: inline-size;
+  scroll-snap-type: y mandatory;
+}
+
+main > section {
+  max-width: 80rem;
+  min-height: 100vh;
+  padding: var(--xl) var(--l) var(--xxl) var(--l);
+  border-top: solid var(--border-width-m) var(--color-seperation);
+  background-color: var(--lightest);
+}
+
+main > section > h2 {
+  margin-bottom: var(--l);
+}
+
+main > section > .teaser {
+  margin-bottom: var(--l);
+  font-size: var(--l);
+}

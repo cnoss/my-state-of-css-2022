@@ -1,0 +1,49 @@
+:root {
+  --bfs: 0.5rem;
+  --xxs: calc(var(--bfs) * 1);
+  --xs: calc(var(--bfs) * 1.25);
+  --s: calc(var(--bfs) * 1.6);
+  --m: calc(var(--bfs) * 2);
+  --l: calc(var(--bfs) * 2.5);
+  --xl: calc(var(--bfs) * 3.15);
+  --xxl: calc(var(--bfs) * 4);
+  --xxxl: calc(var(--bfs) * 5);
+  --xxxxl: calc(var(--bfs) * 6.3);
+  --light: #ccc;
+  --lighter: #eee;
+  --lightest: #fff;
+  --lighten: rgb(255 255 255 / 10%);
+  --dark: #888;
+  --darker: #111;
+  --darkest: #000;
+  --darken: rgb(0 0 0 / 10%);
+  --color-text: var(--darker);
+  --color-headline: var(--dark);
+  --color-accent: #d16; /* #CE4BF2 */
+  --color-decoration: #9313ce; /* #3264A6 */
+  --color-fav: #ea5a00; /* #3264A6 */
+  --color-seperation: #00ad2f; /* #3264A6 */
+  --ff-normal: "IBM-Plex-Sans", sans-serif;
+  --ff-serif: "IBM-Plex-Serif", serif;
+  --ff-code: "IBM-Plex-Mono", monospaced;
+  --ff-icons: "MaterialIcons";
+  --fw-normal: 300;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --op-light: 0.3;
+  --op-medium: 0.5;
+  --lh-normal: 140%;
+  --lh-tight: 120%;
+  --lh-loose: 150%;
+  --tr-fast: 0.3s;
+  --tr-medium: 0.6s;
+  --shadow-l: 0.2vw 0.2vw 1vw rgb(0 0 0 / 20%);
+  --n-shadow-l:
+    20px 20px 60px rgb(0 0 0 / 10%),
+    -20px -20px 60px rgb(255 255 255 / 10%); /* https://neumorphism.io/#e0e0e */
+
+  --border-width-s: 1px;
+  --border-width-m: 3px;
+  --radius-m: var(--m);
+  --tile-width: 20em;
+}

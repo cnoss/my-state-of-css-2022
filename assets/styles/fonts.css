@@ -1,0 +1,35 @@
+@font-face {
+  font-family: IBM-Plex-Serif;
+  font-weight: 300;
+  src: url("../fonts/ibm-plex/IBMPlexSerif-Regular.otf");
+}
+
+@font-face {
+  font-family: IBM-Plex-Sans;
+  font-weight: 300;
+  src: url("../fonts/ibm-plex/IBMPlexSans-Regular.otf");
+}
+
+@font-face {
+  font-family: IBM-Plex-Sans;
+  font-weight: 700;
+  src: url("../fonts/ibm-plex/IBMPlexSans-Bold.otf");
+}
+
+@font-face {
+  font-family: IBM-Plex-Sans;
+  font-weight: 600;
+  src: url("../fonts/ibm-plex/IBMPlexSans-Medium.otf");
+}
+
+@font-face {
+  font-family: MaterialIcons;
+  font-weight: 600;
+  src: url("../fonts/MaterialIcons/MaterialIconsSharp-Regular.otf");
+}
+
+@font-face {
+  font-family: IBM-Plex-Mono;
+  font-weight: 300;
+  src: url("../fonts/ibm-plex/IBMPlexMono-Text.otf");
+}

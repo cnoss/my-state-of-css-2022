@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./assets/styles/example-accent-color.css"/>
     <link rel="stylesheet" href="./assets/styles/example-hwb.css"/>
     <link rel="stylesheet" href="./assets/styles/example-color-mix.css"/>
+    <link rel="stylesheet" href="./assets/styles/example-color-contrast.css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
   </head>
   <body>
@@ -623,12 +624,76 @@ background-color: color-mix(in srgb, #d16 70%,
 
         <div class="usable-indicator">
           <span class="icon">sentiment_dissatisfied</span>
-          <p>Color Mix isr derzeit nur in <a href="https://caniuse.com/mdn-css_types_color_color-mix">Tech Previews verfügbar</a> und kann daher nur für Experimente eingesetzt werden. Die Funktion soll aber 2022 in den großen Browsern verfügbar sein.</p>
+          <p>Color Mix ist derzeit nur in <a href="https://caniuse.com/mdn-css_types_color_color-mix">Tech Previews verfügbar</a> und kann daher nur für Experimente eingesetzt werden. Die Funktion soll aber 2022 in den großen Browsern verfügbar sein. Die Funktion kann im Firefox via <i>about:config</i> und <i>layout.css.color-mix.enabled</i> aktiviert werden.</p>
         </div>
 
         <ul class="further-readings">
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-mix">color-mix()</a>, mdn Webdocs, besucht am 12. Juni 2022</li>
           <li><a href="https://www.smashingmagazine.com/2022/06/simplify-color-palette-css-color-mix/">Simplify Your Color Palette With CSS Color-Mix()</a>, Daniel Yuschick @CSS Tricks, besucht am 12. Juni 2022</li>          
+        </ul>
+      </section>
+
+<!-- Color Contrast
+########################################################################### -->
+      <section id="color-contrast">
+        <h2>Color Contrast</h2>
+
+        <div class="teaser">
+          <p>
+          The color-contrast() functional notation takes a color value and compares it to a list of other color values, selecting the one with the highest contrast from the list.
+          <cite><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-contrast">MDN Web Docs</a></cite>
+          </p>
+        </div>
+
+        <div class="example example-color-contrast">
+          <div class="example-pair">
+            <div class="example-visual base">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus maxime repellendus accusantium perferendis veritatis a sed, mollitia ab sint numquam. Fugiat delectus modi ut minus commodi obcaecati sint soluta ratione.
+              </p>
+            </div>
+            <div class="example-code">
+              <code class="language-css"><pre>
+background-color: #d16;
+color: color-contrast(#d16 vs white, black);</pre></code>
+            </div>
+          </div>
+          <div class="example-pair">
+            <div class="example-visual grey">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus maxime repellendus accusantium perferendis veritatis a sed, mollitia ab sint numquam. Fugiat delectus modi ut minus commodi obcaecati sint soluta ratione.
+              </p>
+            </div>
+            <div class="example-code">
+              <code class="language-css"><pre>
+background-color: #ddd;
+color: color-contrast(#ddd vs white, black);</pre></code>
+            </div>
+          </div>
+          <div class="example-pair">
+            <div class="example-visual interactive">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus maxime repellendus accusantium perferendis veritatis a sed, mollitia ab sint numquam. Fugiat delectus modi ut minus commodi obcaecati sint soluta ratione.
+              </p>
+            </div>
+            <div class="example-code">
+              <div class="slider-wrap">
+                <input type="range" min="1" max="360" value="0" class="slider" id="color-contrast-hue">
+                <input type="range" min="1" max="100" value="0" class="slider" id="color-contrast-white">
+                <input type="range" min="1" max="100" value="0" class="slider" id="color-contrast-black">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="usable-indicator">
+          <span class="icon">sentiment_dissatisfied</span>
+          <p>Color Contrast ist derzeit nur in <a href="https://caniuse.com/mdn-css_types_color_color-contrast">Safari verfügbar</a> und kann daher nur für Experimente eingesetzt werden. Die Funktion soll aber 2022 in den großen Browsern verfügbar sein. Sie kann in Safari via <i>CSS color-contrast()</i> Flag aktiviert werden.</p>
+        </div>
+
+        <ul class="further-readings">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/color-contrast">color-contrast()</a>, mdn Webdocs, besucht am 12. Juni 2022</li>
+          <li><a href="https://css-tricks.com/exploring-color-contrast-for-the-first-time/">Exploring color-contrast() for the First Time</a>, Chris Coyier @CSS Tricks, besucht am 12. Juni 2022</li>          
         </ul>
       </section>
     </main>
@@ -645,5 +710,20 @@ background-color: color-mix(in srgb, #d16 70%,
         target.dataset.additionalContent = target.dataset.additionalContent === 'is-visible' ? 'is-hidden' : 'is-visible';
       });
     });
+
+    const root = document.documentElement;
+    const sliderHue = document.getElementById("color-contrast-hue");
+    sliderHue.addEventListener('input', (ele)=>{
+      root.style.setProperty('--hue',  `${ele.target.value}deg`);
+    });
+    const sliderWhite = document.getElementById("color-contrast-white");
+    sliderWhite.addEventListener('input', (ele)=>{
+      root.style.setProperty('--white', `${ele.target.value}%`);
+    });
+    const sliderBlack = document.getElementById("color-contrast-black");
+    sliderBlack.addEventListener('input', (ele)=>{
+      root.style.setProperty('--black',  `${ele.target.value}%`);
+    });
+
     </script>
 </html>

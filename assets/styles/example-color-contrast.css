@@ -1,0 +1,33 @@
+:root {
+  --hue: 0deg;
+  --white: 0%;
+  --black: 0%;
+}
+
+.example-color-contrast {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m);
+}
+
+.example-color-contrast .example-visual {
+  min-height: 5em;
+  padding: var(--m);
+}
+
+.example-color-contrast .base {
+  background-color: #d16;
+  color: color-contrast(#d16 vs white, black);
+}
+
+.example-color-contrast .grey {
+  background-color: #ddd;
+  color: color-contrast(#ddd vs white, black);
+}
+
+.example-color-contrast .interactive {
+  --bg: hwb(var(--hue) var(--white) var(--black));
+
+  background-color: var(--bg);
+  color: color-contrast(var(--bg) vs #000, #333, #666, #ccc, #eee);
+}

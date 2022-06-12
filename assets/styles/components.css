@@ -26,11 +26,27 @@
   margin-bottom: var(--xxl);
 }
 
+.example-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.example-pair .example-code code pre {
+  background-color: transparent;
+}
+
+.example-pair .example-code {
+  display: flex;
+  align-items: center;
+  background-color: var(--lighter);
+}
+
 /* Teaser
 ###########################################################################  */
 .teaser {
   margin-bottom: var(--l);
   font-size: var(--l);
+  line-height: var(--lh-loose);
 }
 
 .teaser cite {
@@ -66,4 +82,23 @@
 .additional-content-handle:hover {
   cursor: pointer;
   opacity: 1;
+}
+
+/* Explainer Image
+###########################################################################  */
+
+.explainer-image {
+  display: flex;
+  margin-bottom: var(--xl);
+  gap: var(--m);
+}
+
+.explainer-image figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explainer-image.is-small img {
+  max-width: 10rem;
 }

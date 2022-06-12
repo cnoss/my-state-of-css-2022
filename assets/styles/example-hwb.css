@@ -1,0 +1,45 @@
+.example-hwb {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m);
+}
+
+.example-hwb .example-visual {
+  min-height: 5em;
+}
+
+.example-hwb .single-color {
+  background-color: hwb(0deg 0% 0%);
+}
+
+.example-hwb .single-color.deg-120 {
+  background-color: hwb(120deg 0% 0%);
+}
+
+.example-hwb .single-color.deg-240 {
+  background-color: hwb(240deg 0% 0%);
+}
+
+.example-hwb .single-color.deg-240.w-50 {
+  background-color: hwb(240deg 50% 0%);
+}
+
+.example-hwb .single-color.deg-240.w-50.b-20 {
+  background-color: hwb(240deg 50% 20%);
+}
+
+.example-hwb .single-color.deg-240.w-50.b-40 {
+  background-color: hwb(240deg 50% 40%);
+}
+
+.example-hwb .single-color.deg-240.w-50.b-60 {
+  background-color: hwb(240deg 50% 60%);
+}
+
+.example-hwb .single-color.deg-240.w-50.b-80 {
+  background-color: hwb(240deg 50% 80%);
+}
+
+.example-hwb .single-color.deg-240.w-50.b-100 {
+  background-color: hwb(240deg 50% 100%);
+}

@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./assets/styles/example-hwb.css"/>
     <link rel="stylesheet" href="./assets/styles/example-color-mix.css"/>
     <link rel="stylesheet" href="./assets/styles/example-color-contrast.css"/>
+    <link rel="stylesheet" href="./assets/styles/example-relative-color.css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
   </head>
   <body>
@@ -78,9 +79,7 @@
           </p>
         </div>
 
-        <code class="language-css"><pre>
-            
-@layer base, theme;
+        <pre><code class="language-css">@layer base, theme;
 
 @layer base {
   .card {
@@ -98,8 +97,7 @@
   .card {
     …
   }
-}
-        </pre></code>
+}</code></pre>
 
         <div class="usable-indicator">
           <span class="icon">sentiment_very_satisfied</span>
@@ -161,9 +159,7 @@
             </div>
           </div>
   
-          <code class="language-css"><pre>
-
-.grid-container {
+          <pre><code class="language-css">.grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -172,8 +168,7 @@
   display: grid;
   grid-template-columns: subgrid;
   grid-column: span 2;
-}
-          </pre></code>
+}</code></pre>
   
           <div class="usable-indicator">
             <span class="icon">sentiment_neutral</span>
@@ -201,37 +196,29 @@
           <figure>
             <p class="shoutout aspect-ratio-2-1">Aspect Ratio für Container</p>
             <figcaption>
-              <code class="language-css"><pre>
-
-.aspect-ratio-2-1{
+              <pre><code class="language-css">.aspect-ratio-2-1{
   aspect-ratio: 2/1;
 }
 
 .aspect-ratio-2-1:hover {
   aspect-ratio: 1/1;
-}
-              </pre></code>
+}</code></pre>
             </figcaption>
           </figure>
             
           <figure>
             <img src="//unsplash.it/id/1060/401" alt="Placeholder Image" class="aspect-ratio-2-1">
             <figcaption>
-              <code class="language-css"><pre>
-
-.aspect-ratio-2-1{
+              <pre><code class="language-css">.aspect-ratio-2-1{
   aspect-ratio: 2/1;
-}
-              </pre></code>
+}</code></pre>
             </figcaption>
           </figure>
             
           <figure>
             <img src="//unsplash.it/id/1060/401" alt="Placeholder Image" class="aspect-ratio-2-1 o-f-cover">
             <figcaption>
-              <code class="language-css"><pre>
-                
-.aspect-ratio-2-1{
+              <pre><code class="language-css">.aspect-ratio-2-1{
   aspect-ratio: 2/1;
 }
 
@@ -239,20 +226,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-              </pre></code>
+}</code></pre>
             </figcaption>
           </figure>
 
           <figure>
             <img src="//unsplash.it/id/1060/401" alt="Placeholder Image" class="aspect-ratio-2-1 o-f-cover o-p-bottom">
             <figcaption>
-              <code class="language-css"><pre>
-                
-.o-p-bottom{
+              <pre><code class="language-css">.o-p-bottom{
   object-position: bottom;
-}
-              </pre></code>
+}</code></pre>
             </figcaption>
           </figure>
         </div>
@@ -366,9 +349,7 @@
           </div>
         </div>
 
-        <code class="language-css"><pre>
-          
-.card-wrap {
+        <pre><code class="language-css">.card-wrap {
   container-name: grid-element;
   container-type: inline-size;
 }
@@ -381,8 +362,7 @@
   .card img {
     width: 50%;
   }
-}
-          </pre></code>
+}</code></pre>
 
         <div class="usable-indicator">
           <span class="icon">sentiment_dissatisfied</span>
@@ -404,7 +384,7 @@
         <div class="teaser">
           <p>
             The accent-color property in CSS is capable of re-tinting the accented color of form controls provided by the browser’s default styles with a custom color value.
-            <cite><a href="https://css-tricks.com/almanac/properties/a/accent-color/">Geoff Graham at CSS Tricks</a></cite>
+            <cite><a href="https://css-tricks.com/almanac/properties/a/accent-color/">Geoff Graham // CSS Tricks</a></cite>
           </p>
         </div>
 
@@ -434,19 +414,13 @@
           </label>
         </div>
 
-        <code class="language-css"><pre>
-          
-.element {
+        <pre><code class="language-css">.element {
   accent-color: #dd116;
-}
-        </pre></code>
+}</code></pre>
 
-        <code class="language-css"><pre>
-          
-:root {
+        <pre><code class="language-css">:root {
   accent-color: #dd116;
-}
-        </pre></code>
+}</code></pre>
         
         <div class="usable-indicator">
           <span class="icon">sentiment_satisfied</span>
@@ -467,7 +441,7 @@
         <div class="teaser">
           <p>
            HWB stands for hue, whiteness and blackness. Like HSL, the hue can be anywhere within a range of 0 to 360. The other two arguments control how much white or black is mixed into that hue, up to 100% (which would result in a totally white or totally black color). If equal amounts of white and black are mixed in, the color becomes increasingly gray. We can think of this as being similar to mixing paint. It could be especially useful for creating monochrome color palettes.
-          <cite><a href="https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/#hwb">Michelle Barker at CSS Tricks</a></cite>
+          <cite><a href="https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/#hwb">Michelle Barker // CSS Tricks</a></cite>
           </p>
         </div>
         
@@ -483,64 +457,56 @@
             <div class="example-visual single-color">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: hwb(0deg 0% 0%);</pre></code>
+              <pre><code class="language-css">background-color: hwb(0deg 0% 0%);</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color deg-120">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: hwb(120deg 0% 0%);</pre></code>
+              <pre><code class="language-css">background-color: hwb(120deg 0% 0%);</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color deg-240">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: hwb(240deg 0% 0%);</pre></code>
+              <pre><code class="language-css">background-color: hwb(240deg 0% 0%);</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color deg-240 w-50">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: hwb(240deg 50% 0%);</pre></code>
+              <pre><code class="language-css">background-color: hwb(240deg 50% 0%);</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color deg-240 w-50 b-20">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: hwb(240deg 50% 20%);</pre></code>
+              <pre><code class="language-css">background-color: hwb(240deg 50% 20%);</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color deg-240 w-50 b-40">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: hwb(240deg 50% 40%);</pre></code>
+              <pre><code class="language-css">background-color: hwb(240deg 50% 40%);</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color deg-240 w-50 b-60">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: hwb(240deg 50% 60%);</pre></code>
+              <pre><code class="language-css">background-color: hwb(240deg 50% 60%);</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color deg-240 w-50 b-80">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: hwb(240deg 50% 80%);</pre></code>
+              <pre><code class="language-css">background-color: hwb(240deg 50% 80%);</code></pre>
             </div>
           </div>
         </div>
@@ -566,7 +532,7 @@ background-color: hwb(240deg 50% 80%);</pre></code>
         <div class="teaser">
           <p>
            Defining a color palette and theme can be a lot of work, especially when considering contextual colors for elements’ various states. While CSS color-mix() only blends two colors together, this little function may be the key to maximizing your colors without maximum effort.
-          <cite><a href="https://www.smashingmagazine.com/2022/06/simplify-color-palette-css-color-mix/"> Daniel Yuschick at CSS Tricks</a></cite>
+          <cite><a href="https://www.smashingmagazine.com/2022/06/simplify-color-palette-css-color-mix/"> Daniel Yuschick // CSS Tricks</a></cite>
           </p>
         </div>
 
@@ -575,49 +541,44 @@ background-color: hwb(240deg 50% 80%);</pre></code>
             <div class="example-visual single-color">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: color-mix(in srgb, red 50%, yellow);</pre></code>
+              <pre><code class="language-css">background-color: color-mix(in srgb, red 50%, yellow);</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color r-b">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: color-mix(in srgb, red 50%, blue);</pre></code>
+              <pre><code class="language-css">background-color: color-mix(in srgb, red 50%, blue);</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color base">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: #d16;</pre></code>
+              <pre><code class="language-css">background-color: #d16;</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color lighten">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: color-mix(in srgb, #d16 70%, white);</pre></code>
+              <pre><code class="language-css">
+background-color: color-mix(in srgb, #d16 70%, white);</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color darken">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: color-mix(in srgb, #d16 70%, black);</pre></code>
+              <pre><code class="language-css">background-color: color-mix(in srgb, #d16 70%, black);</code></pre>
             </div>
           </div>
           <div class="example-pair">
             <div class="example-visual single-color alpha">
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: color-mix(in srgb, #d16 70%, 
-  rgb(255 255 255 / 50%));</pre></code>
+              <pre><code class="language-css">background-color: color-mix(in srgb, #d16 70%, 
+  rgb(255 255 255 / 50%));</code></pre>
             </div>
           </div>
         </div>
@@ -653,9 +614,8 @@ background-color: color-mix(in srgb, #d16 70%,
               </p>
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: #d16;
-color: color-contrast(#d16 vs white, black);</pre></code>
+              <pre><code class="language-css">background-color: #d16;
+color: color-contrast(#d16 vs white, black);</code></pre>
             </div>
           </div>
           <div class="example-pair">
@@ -665,9 +625,8 @@ color: color-contrast(#d16 vs white, black);</pre></code>
               </p>
             </div>
             <div class="example-code">
-              <code class="language-css"><pre>
-background-color: #ddd;
-color: color-contrast(#ddd vs white, black);</pre></code>
+              <pre><code class="language-css">background-color: #ddd;
+color: color-contrast(#ddd vs white, black);</code></pre>
             </div>
           </div>
           <div class="example-pair">
@@ -696,11 +655,55 @@ color: color-contrast(#ddd vs white, black);</pre></code>
           <li><a href="https://css-tricks.com/exploring-color-contrast-for-the-first-time/">Exploring color-contrast() for the First Time</a>, Chris Coyier @CSS Tricks, besucht am 12. Juni 2022</li>          
         </ul>
       </section>
+
+<!-- Relative Color
+########################################################################### -->
+      <section id="relative-color">
+        <h2>Relative Color</h2>
+
+        <div class="teaser">
+          <p>
+          Relative color allows us to manipulate and convert any color to any format. We can use it to create a color palette from any chosen color.
+          <cite><a href="https://dev.to/fabiogiolito/create-a-color-theme-with-these-upcoming-css-features-4o83">Fabio Giolito</a></cite>
+          </p>
+        </div>
+
+        <div class="example example-relative-color">
+          <div class="example-pair">
+            <div class="example-visual base"></div>
+            <div class="example-code">
+              <pre><code class="language-css">--basecolor: rgb(221 17 102);
+background-color: var(--basecolor);</code></pre>
+            </div>
+          </div>
+          <div class="example-pair">
+            <div class="example-visual contrast">
+              <div class="variant-a"></div>
+              <div class="variant-b"></div>
+            </div>
+            <div class="example-code">
+              <pre><code class="language-css">background-color: rgb(from var(--basecolor) r g 20);
+
+background-color: rgb(from var(--basecolor) r g 250);</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="usable-indicator">
+          <span class="icon">sentiment_dissatisfied</span>
+          <p>Zur Relative Color Funktion ließ sich leider weder bei <a href="https://caniuse.com/?search=relative%20color">Can I use</a> noch bei <a href="https://developer.mozilla.org/">MDN Web Docs</a> etwas finden. Daher ist diese Funktion wohl erst mal als <i>experimentell</i> einzustufen.</p>
+        </div>
+
+        <ul class="further-readings">
+          <li><a href="https://www.w3.org/TR/css-color-5/#relative-color">CSS Color Module Level 5</a>, W3C Working Draft, besucht am 12. Juni 2022</li>
+          <li><a href="https://blog.jim-nielsen.com/2021/css-relative-colors/">Dynamic Color Manipulation with CSS Relative Colors</a>, Jim Nielsen, besucht am 12. Juni 2022</li>          
+        </ul>
+      </section>
     </main>
-  </body>
+  
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
   <script>
-    document.querySelectorAll('code > pre').forEach(ele => {
+    document.querySelectorAll('pre > code').forEach(ele => {
       hljs.highlightElement(ele);
     });
 
@@ -726,4 +729,5 @@ color: color-contrast(#ddd vs white, black);</pre></code>
     });
 
     </script>
+  </body>
 </html>

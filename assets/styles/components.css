@@ -31,7 +31,7 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.example-pair .example-code code pre {
+.example-pair .example-code pre code {
   background-color: transparent;
 }
 

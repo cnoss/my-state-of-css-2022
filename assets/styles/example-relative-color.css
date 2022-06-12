@@ -1,0 +1,30 @@
+:root {
+  --basecolor: rgb(221 17 102);
+}
+
+.example-relative-color {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m);
+}
+
+.example-relative-color .example-visual {
+  min-height: 5em;
+}
+
+.example-relative-color .base {
+  background-color: var(--basecolor);
+}
+
+.example-relative-color .contrast {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.example-relative-color .contrast .variant-a {
+  background-color: rgb(from var(--basecolor) r g 20);
+}
+
+.example-relative-color .contrast .variant-b {
+  background-color: rgb(from var(--basecolor) r g 250);
+}

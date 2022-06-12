@@ -16,7 +16,7 @@
   background-color: var(--lighter);
 }
 
-.example-aspect-ratio > figure > figcaption code > pre {
+.example-aspect-ratio > figure > figcaption pre code {
   background-color: transparent;
 }
 

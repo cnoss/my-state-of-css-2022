@@ -65,7 +65,7 @@ li {
   margin-left: var(--m);
 }
 
-code pre {
+pre code {
   padding: 0 var(--m);
   background-color: var(--lighter);
   font-family: var(--ff-code);

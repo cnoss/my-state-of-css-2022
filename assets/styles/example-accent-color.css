@@ -1,0 +1,19 @@
+:root {
+  accent-color: var(--color-accent);
+}
+
+.example-accent-color {
+  max-width: 30rem;
+}
+
+.example-accent-color label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.example-accent-color fieldset {
+  padding: 0;
+  border: none;
+}

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./assets/styles/example-subgrid.css"/>
     <link rel="stylesheet" href="./assets/styles/example-aspect-ratio.css"/>
     <link rel="stylesheet" href="./assets/styles/example-container-queries.css"/>
+    <link rel="stylesheet" href="./assets/styles/example-accent-color.css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
   </head>
   <body>
@@ -29,6 +30,13 @@
           <li><a href="#css-subgrid">Subgrid</a></li>
           <li><a href="#aspect-ratio">Aspect Ratio & Object Fit</a></li>
           <li><a href="#container-queries">Container Queries</a></li>
+          <li><a href="#accent-color">Accent Color</a></li>
+          <li><a href="#hwb">Hue, Whiteness & Blackness</a></li>
+          <li><a href="#color-mix">Color Mix</a></li>
+          <li><a href="#color-contrast">Color Contrast</a></li>
+          <li><a href="#relative-color">Relative Color</a></li>
+          <li><a href="#has">:has()</a></li>
+          <li><a href="#inert">HTMLElement.inert</a></li>
         </ul>
 
         <div class="additional-content" data-additional-content="is-hidden">
@@ -246,7 +254,6 @@
           </figure>
         </div>
 
-
         <div class="usable-indicator">
           <span class="icon">sentiment_very_satisfied</span>
           <p>Aspect-Ratio ist in <a href="https://caniuse.com/mdn-css_properties_aspect-ratio">fast allen aktuellen Browsern implementiert (globale Verfügbarkeit 86.51%)</a> und kann für professionellen Einsatz genutzt werden. Object-fit hat derzeit eine <a href="https://caniuse.com/?search=object-fit">globale Verfügbarkeit von ca. 95%</a></p>
@@ -385,6 +392,70 @@
           <li><a href="https://www.miriamsuzanne.com/2021/05/02/container-queries/">Container Queries, Explainer & Proposal</a>, Miriam Eric Suzanne, besucht am 12. Juni 2022</li>
         </ul>
       </section>
+
+<!-- Accent Color
+########################################################################### -->
+      <section id="accent-color">
+        <h2>Accent Color</h2>
+
+        <div class="teaser">
+          <p>
+            The accent-color property in CSS is capable of re-tinting the accented color of form controls provided by the browser’s default styles with a custom color value.
+            <cite><a href="https://css-tricks.com/almanac/properties/a/accent-color/">Geoff Graham at CSS Tricks</a></cite>
+          </p>
+        </div>
+
+        <div class="example example-accent-color">
+          <label>
+            Checkbox
+            <input type="checkbox" checked>
+          </label>
+
+          <label>
+            Radio Buttons
+            <fieldset>
+              <input type="radio" name="accented-demo" checked>
+              <input type="radio" name="accented-demo">
+              <input type="radio" name="accented-demo">
+            </fieldset>
+          </label>
+
+          <label>
+            Range Slider
+            <input type="range">
+          </label>
+
+          <label>
+            Progress element
+            <progress max="100" value="50">50%</progress>
+          </label>
+        </div>
+
+        <code class="language-css"><pre>
+          
+.element {
+  accent-color: #dd116;
+}
+        </pre></code>
+
+        <code class="language-css"><pre>
+          
+:root {
+  accent-color: #dd116;
+}
+        </pre></code>
+        
+        <div class="usable-indicator">
+          <span class="icon">sentiment_satisfied</span>
+          <p> Accent Color hat derzeit eine <a href="https://caniuse.com/?search=accent-color">globale Verfügbarkeit von ca. 83%</a> und kann für den professionellen Einsatz in Erwägung gezogen werden.</p>
+        </div>
+     
+        <ul class="further-readings">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/accent-color">accent-color</a>, mdn Webdocs, besucht am 12. Juni 2022</li>
+          <li><a href="https://css-tricks.com/almanac/properties/a/accent-color/">accent-color</a>, Geoff Graham @CSS Tricks, besucht am 12. Juni 2022</li>
+        </ul>
+      </section>
+
     </main>
   </body>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>

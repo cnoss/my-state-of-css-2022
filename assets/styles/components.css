@@ -71,6 +71,33 @@
   background-color: var(--lighter);
 }
 
+/* Further Readings & Inspiration
+###########################################################################  */
+
+.further-readings,
+.further-inspiration {
+  padding-bottom: var(--m);
+  margin-top: var(--xl);
+}
+
+.further-readings::before,
+.further-inspiration::before {
+  display: block;
+  padding-bottom: var(--s);
+  color: var(--color-decoration);
+  content: "Lesestoff:";
+  font-size: var(--l);
+}
+
+.further-readings li {
+  display: block;
+  margin: 0;
+}
+
+.further-inspiration::before {
+  content: "Inspiration:";
+}
+
 /* Teaser
 ###########################################################################  */
 .teaser {

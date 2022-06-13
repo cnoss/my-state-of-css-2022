@@ -1,0 +1,50 @@
+.example-inert .example-visual {
+  padding-right: var(--m);
+}
+
+.example-inert .formfield {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: var(--xs);
+}
+
+.example-inert input,
+.example-inert select,
+.example-inert button {
+  padding: var(--xxs);
+  border: solid var(--border-width-s) var(--darkest);
+  background-color: var(--darken);
+  transition: all var(--tr-fast);
+}
+
+.example-inert input:hover {
+  border-width: var(--border-width-m);
+}
+
+.example-inert button:hover {
+  background-color: var(--color-accent);
+  color: var(--lightest);
+}
+
+.example-inert .example-pair {
+  margin-bottom: var(--m);
+}
+
+.example-inert .demo-form p {
+  margin-bottom: var(--m);
+}
+
+.example-inert .demo-form label {
+  color: var(--dark);
+  font-size: var(--s);
+}
+
+.example-inert .example-visual {
+  padding: var(--m);
+  background-color: var(--dark);
+  color: var(--lightest);
+}
+
+.example-inert .example-visual * {
+  color: var(--lightest);
+}

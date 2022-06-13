@@ -7,6 +7,33 @@
   padding: var(--m);
 }
 
+/* Links
+###########################################################################  */
+
+.links {
+  margin-top: var(--xxl);
+  margin-bottom: var(--xxl);
+}
+
+.links li {
+  display: block;
+  margin: 0;
+}
+
+.links li a {
+  display: block;
+  padding-top: var(--xxs);
+  padding-bottom: var(--xxs);
+  transition: all var(--tr-fast);
+}
+
+.links li a:hover {
+  padding-left: var(--xs);
+  background-color: var(--dark);
+  color: var(--lightest);
+  text-decoration: none;
+}
+
 /* Usable Indicator
 ###########################################################################  */
 
@@ -23,6 +50,9 @@
 ###########################################################################  */
 
 .example {
+  width: 100%;
+  padding-top: var(--m);
+  border-top: solid var(--border-width-m) var(--darken);
   margin-bottom: var(--xxl);
 }
 
@@ -44,7 +74,8 @@
 /* Teaser
 ###########################################################################  */
 .teaser {
-  margin-bottom: var(--l);
+  padding-right: 20vw;
+  margin-bottom: var(--xxl);
   font-size: var(--l);
   line-height: var(--lh-loose);
 }
@@ -52,7 +83,7 @@
 .teaser cite {
   display: block;
   font-size: var(--m);
-  text-align: right;
+  font-style: normal;
 }
 
 /* Additional Content

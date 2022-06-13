@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>CSS Layouts</title>
+    <title>WebTech // MI Master // State of CSS 2022</title>
     <link rel="stylesheet" href="./assets/styles/reset.css"/>
     <link rel="stylesheet" href="./assets/styles/fonts.css"/>
     <link rel="stylesheet" href="./assets/styles/icons.css"/>
@@ -21,15 +21,18 @@
     <link rel="stylesheet" href="./assets/styles/example-color-mix.css"/>
     <link rel="stylesheet" href="./assets/styles/example-color-contrast.css"/>
     <link rel="stylesheet" href="./assets/styles/example-relative-color.css"/>
+    <link rel="stylesheet" href="./assets/styles/example-has.css"/>
+    <link rel="stylesheet" href="./assets/styles/example-inert.css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
   </head>
   <body>
-    <header class="main-header">
-      <div class="main-header__content">
+    <div class="main-header">
+      <div class="main-header__content" lang="en">
         <h1>State of CSS</h1>
-        <p>ein paar neuere CSS Features, Stand 06.2022</p>
+        <p lang="de">Vorstellung und Beispiele für ein paar neuere CSS Features, Stand 06.2022</p>
 
-        <ul>
+        <ul class="links">
+          <li><a href="#intro">Intro</a></li>
           <li><a href="#cascade-layers">Cascade Layers</a></li>
           <li><a href="#css-subgrid">Subgrid</a></li>
           <li><a href="#aspect-ratio">Aspect Ratio & Object Fit</a></li>
@@ -64,9 +67,20 @@
           </div>
         </div>
       </div>
-    </header>
+    </div>
 
     <main>
+
+<!-- Intro
+################################################################### -->
+      <section>
+        <h2>Worum geht's?</h2>
+        <div id="intro" class="teaser">
+          <p>
+            Basis für dieses Dokument ist der <a href="https://web.dev/state-of-css-2022/">State of CSS 2022 Vortrag</a> von <a href="https://web.dev/authors/adamargyle/">Adam Argyle</a>. Ich habe eine Themen/ Techniken heraus gepickt, ein wenig ausgelotet und ausprobiert und Beispiele dazu entwickelt (oder manchmal auch stumpf übernommen). <a href="https://christiannoss.de">cn</a>/ 06.2022
+          </p>
+        </div>
+      </section>
 
 <!-- Cascade Layers
 ################################################################### -->
@@ -74,8 +88,9 @@
         <h2>Cascade Layers</h2>
 
         <div class="teaser">
-          <p>
+          <p lang="en">
             The @layer CSS at-rule is used to declare a cascade layer and can also be used to define the order of precedence in case of multiple cascade layers.
+            <cite><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@layer">MDN Webdocs</a></cite>
           </p>
         </div>
 
@@ -118,7 +133,8 @@
   
           <div class="teaser">
             <p>
-              CSS Grid wirkt sich nur auf die direkten Kind-Elemente des Grid-Containters aus. Mit Subgrid können tiefer verschachtelte Ebenen am Raster ausgerichtet werden. 
+              CSS Grid wirkt sich nur auf die direkten Kind-Elemente des Grid-Containers aus. Mit Subgrid können tiefer verschachtelte Ebenen am Raster ausgerichtet werden. 
+              <cite><a href="https://kulturbanause.de/blog/css-subgrid-verschachtelte-grids/">kulturbanause Team</a></cite>
             </p>
           </div>
   
@@ -187,8 +203,9 @@
         <h2>Aspect Ratio & Object Fit</h2>
 
         <div class="teaser">
-          <p>
+          <p lang="en">
             The aspect-ratio CSS property sets a preferred aspect ratio for the box, which will be used in the calculation of auto sizes and some other layout functions. 
+            <cite><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">MDN Webdocs</a></cite>
           </p>
         </div>
 
@@ -258,7 +275,7 @@
       <section id="container-queries">
         <h2>Container Queries</h2>
         <div class="teaser">
-          <p>
+          <p lang="en">
             Media-queries allow an author to make style changes based on the overall viewport dimensions – but in many cases, authors would prefer styling modular components based on their context within a layout. 
 
             <cite><a href="https://www.miriamsuzanne.com/2021/05/02/container-queries/">Miriam Eric Suzanne in Container Queries, Explainer & Proposal</a></cite>
@@ -382,33 +399,33 @@
         <h2>Accent Color</h2>
 
         <div class="teaser">
-          <p>
+          <p lang="en">
             The accent-color property in CSS is capable of re-tinting the accented color of form controls provided by the browser’s default styles with a custom color value.
             <cite><a href="https://css-tricks.com/almanac/properties/a/accent-color/">Geoff Graham // CSS Tricks</a></cite>
           </p>
         </div>
 
         <div class="example example-accent-color">
-          <label>
+          <label class="row">
             Checkbox
             <input type="checkbox" checked>
           </label>
 
-          <label>
+          <div class="row">
             Radio Buttons
-            <fieldset>
+            <div>
               <input type="radio" name="accented-demo" checked>
               <input type="radio" name="accented-demo">
               <input type="radio" name="accented-demo">
-            </fieldset>
-          </label>
+            </div>
+          </div>
 
-          <label>
+          <label class="row">
             Range Slider
             <input type="range">
           </label>
 
-          <label>
+          <label class="row">
             Progress element
             <progress max="100" value="50">50%</progress>
           </label>
@@ -439,7 +456,7 @@
         <h2>Hue, Whiteness & Blackness</h2>
 
         <div class="teaser">
-          <p>
+          <p lang="en">
            HWB stands for hue, whiteness and blackness. Like HSL, the hue can be anywhere within a range of 0 to 360. The other two arguments control how much white or black is mixed into that hue, up to 100% (which would result in a totally white or totally black color). If equal amounts of white and black are mixed in, the color becomes increasingly gray. We can think of this as being similar to mixing paint. It could be especially useful for creating monochrome color palettes.
           <cite><a href="https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/#hwb">Michelle Barker // CSS Tricks</a></cite>
           </p>
@@ -530,7 +547,7 @@
         <h2>Color Mix</h2>
 
         <div class="teaser">
-          <p>
+          <p lang="en">
            Defining a color palette and theme can be a lot of work, especially when considering contextual colors for elements’ various states. While CSS color-mix() only blends two colors together, this little function may be the key to maximizing your colors without maximum effort.
           <cite><a href="https://www.smashingmagazine.com/2022/06/simplify-color-palette-css-color-mix/"> Daniel Yuschick // CSS Tricks</a></cite>
           </p>
@@ -662,7 +679,7 @@ color: color-contrast(#ddd vs white, black);</code></pre>
         <h2>Relative Color</h2>
 
         <div class="teaser">
-          <p>
+          <p lang="en">
           Relative color allows us to manipulate and convert any color to any format. We can use it to create a color palette from any chosen color.
           <cite><a href="https://dev.to/fabiogiolito/create-a-color-theme-with-these-upcoming-css-features-4o83">Fabio Giolito</a></cite>
           </p>
@@ -697,6 +714,170 @@ background-color: rgb(from var(--basecolor) r g 250);</code></pre>
         <ul class="further-readings">
           <li><a href="https://www.w3.org/TR/css-color-5/#relative-color">CSS Color Module Level 5</a>, W3C Working Draft, besucht am 12. Juni 2022</li>
           <li><a href="https://blog.jim-nielsen.com/2021/css-relative-colors/">Dynamic Color Manipulation with CSS Relative Colors</a>, Jim Nielsen, besucht am 12. Juni 2022</li>          
+        </ul>
+      </section>
+
+<!-- :has() Selector
+########################################################################### -->
+      <section id="has">
+        <h2>:has() Selector</h2>
+
+        <div class="teaser">
+          <p lang="en">
+          The :has() CSS pseudo-class represents an element if any of the selectors passed as parameters match at least one element.
+          <cite><a href="https://www.bram.us/2021/12/21/the-css-has-selector-is-way-more-than-a-parent-selector/">Bramus Van Damme</a></cite>
+          </p>
+        </div>
+
+        <div class="example example-has">
+          <div class="example-pair">
+            <div class="example-visual">
+              <figure>
+                <img src="//unsplash.it/id/1001/400" alt="Placeholder Image">
+              </figure>
+            </div>
+            <div class="example-code">
+            </div>
+          </div>
+          
+          <div class="example-pair">
+            <div class="example-visual">
+              <figure>
+                <img src="//unsplash.it/id/1001/400" alt="Placeholder Image">
+                <figcaption>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, dolor recusandae eius quas repellat quod obcaecati voluptates minima ut numquam quisquam optio a hic nemo eligendi ducimus qui tenetur odit!
+                </figcaption>
+              </figure>
+            </div>
+            <div class="example-code">
+              <pre><code class="language-css">figure:has(figcaption) {
+  overflow: hidden;
+  border: solid var(--border-width-m) var(--darkest);
+  border-radius: var(--radius-m);
+}
+              
+figure:has(figcaption) img {
+  object-position: bottom;
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <div class="usable-indicator">
+          <span class="icon">sentiment_dissatisfied</span>
+          <p>Der :has() Selector ist im <a href="https://caniuse.com/css-has"> aktuellen Chrome(106) und der Safari Tech Preview</a> verfügbar. Daher ist diese Funktion wohl erst mal als <i>experimentell</i> einzustufen.</p>
+        </div>
+
+        <ul class="further-readings">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:has">:has()</a>, mdn Webdocs, besucht am 12. Juni 2022</li>
+          <li><a href="https://www.bram.us/2021/12/21/the-css-has-selector-is-way-more-than-a-parent-selector/">The CSS :has() selector is way more than a “Parent Selector”</a>, Bramus Van Damme, besucht am 12. Juni 2022</li>
+          <li><a href="https://www.smashingmagazine.com/2021/06/has-native-css-parent-selector/#css-has-pseudo-class-specification">CSS :has Pseudo-Class Specification</a>, Adrian Bece @smashingmagazine, besucht am 12. Juni 2022</li>
+        </ul>
+      </section>
+
+<!-- inert
+########################################################################### -->
+      <section id="inert">
+        <h2>HTMLElement.inert</h2>
+      
+        <div class="teaser">
+          <p lang="en">
+            The HTMLElement property inert is a boolean value that, when present, makes the browser "ignore" user input events for the element, including focus events and events from assistive technologies. The browser may also ignore page search and text selection in the element. This can be useful when building UIs such as modals where you would want to "trap" the focus inside the modal when it's visible.
+          <cite><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert">MDN Webdocs</a></cite>
+          </p>
+        </div>
+      
+        <div class="example example-inert">
+          <div class="example-pair">
+            <div class="example-visual">
+              <form class="demo-form">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nemo voluptatem velit at excepturi officiis quam quia sunt omnis voluptatibus? Atque deleniti soluta quo, odit ea repellat quisquam veniam quis?
+                </p>
+                <div class="formfield">
+                  <label for="first-name">Vorname</label>
+                  <input type="text" name="first-name" id="first-name" value="Bill">
+                </div>
+
+                <div class="formfield">
+                  <label for="last-name">Nachname</label>
+                  <input type="text" name="last-name" id="last-name" value="Gates">
+                </div>
+
+                <div class="formfield">
+                  <label for="studiengang">Studiengang</label>
+                  <select name="studiengang" id="studiengang">
+                    <option value="coco">Code & Context</option>
+                    <option value="inf">Informatik</option>
+                    <option value="itm">IT-Management</option>
+                    <option value="mi">Medieninformatik</option>
+                    <option value="wi">Wirtschaftsinformatik</option>
+                  </select>
+                </div>
+
+                <button type="submit">absenden</button>
+                <button type="reset">zurücksetzen</button>
+
+              </form>
+            </div>
+            <div class="example-code">
+              <pre><code class="language-html">&#x3C;form class=&#x22;demo-form&#x22;&#x3E;
+&#x2026;
+&#x3C;/form&#x3E;</code></pre>
+              
+            </div>
+          </div>
+          <div class="example-pair">
+            <div class="example-visual" inert>
+              <form class="demo-form" >
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nemo voluptatem velit at excepturi officiis quam quia sunt omnis voluptatibus? Atque deleniti soluta quo, odit ea repellat quisquam veniam quis?
+                </p>
+                <div class="formfield">
+                  <label for="first-name-2">Vorname</label>
+                  <input type="text" name="first-name" id="first-name-2" value="Bill">
+                </div>
+
+                <div class="formfield">
+                  <label for="last-name-2">Nachname</label>
+                  <input type="text" name="last-name" id="last-name-2" value="Gates">
+                </div>
+
+                <div class="formfield">
+                  <label for="studiengang-2">Studiengang</label>
+                  <select name="studiengang" id="studiengang-2">
+                    <option value="coco">Code & Context</option>
+                    <option value="inf">Informatik</option>
+                    <option value="itm">IT-Management</option>
+                    <option value="mi">Medieninformatik</option>
+                    <option value="wi">Wirtschaftsinformatik</option>
+                  </select>
+                </div>
+
+                <button type="submit">absenden</button>
+                <button type="reset">zurücksetzen</button>
+
+              </form>
+            </div>
+            <div class="example-code">
+              <pre><code class="language-html">&#x3C;form class=&#x22;demo-form&#x22; inert&#x3E; 
+&#x2026;
+&#x3C;/form&#x3E;</code></pre>
+              
+            </div>
+          </div>
+
+        </div>
+      
+        <div class="usable-indicator">
+          <span class="icon">sentiment_neutral</span>
+          <p>Die <i>inert</i> Eigenschaft ist in einigen <a href="https://caniuse.com/mdn-api_htmlelement_inert">einigen aktuellen Browsern implementiert</a>. Die globale Verfügbarkeit beträgt 43%. verfügbar.</p>
+        </div>
+      
+        <ul class="further-readings">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/inert">HTMLElement.inert</a>, mdn Webdocs, besucht am 13. Juni 2022</li>
+          <li><a href="https://developer.chrome.com/articles/inert/">Introducing inert</a>, Emma Twersky, besucht am 13. Juni 2022</li>
+          <li><a href="https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/">The "inert" attribute is finally coming to the web</a>, Stefan Judis, besucht am 12. Juni 2022</li>
         </ul>
       </section>
     </main>

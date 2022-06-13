@@ -1,0 +1,44 @@
+:root {
+  --basecolor: rgb(221 17 102);
+}
+
+.example-has {
+  display: flex;
+  flex-direction: column;
+  gap: var(--m);
+}
+
+.example-has .example-visual {
+  min-height: 5em;
+}
+
+.example-has .example-visual figure {
+  position: relative;
+}
+
+.example-has .example-visual figure:has(figcaption) {
+  overflow: hidden;
+  border: solid var(--border-width-m) var(--darkest);
+  border-radius: var(--radius-m);
+}
+
+.example-has .example-visual figure:has(figcaption) img {
+  object-position: bottom;
+}
+
+.example-has .example-visual img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+
+.example-has .example-visual figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: var(--xxl) var(--m) var(--l);
+  background-image: linear-gradient(rgb(0 0 0 / 0%), rgb(0 0 0 / 100%));
+  color: var(--lightest);
+}

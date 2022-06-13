@@ -2,11 +2,7 @@
   accent-color: var(--color-accent);
 }
 
-.example-accent-color {
-  max-width: 30rem;
-}
-
-.example-accent-color label {
+.example-accent-color .row {
   display: flex;
   align-items: center;
   justify-content: space-between;

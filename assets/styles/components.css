@@ -86,7 +86,8 @@
   padding-bottom: var(--s);
   color: var(--color-decoration);
   content: "Lesestoff:";
-  font-size: var(--l);
+  font-size: 1.2em;
+  font-weight: var(--fw-bold);
 }
 
 .further-readings li {

@@ -1,5 +1,19 @@
+@layer utilities, variants, theme;
+
 @layer theme {
   h2 {
-    color: var(--color-decoration);
+    color: blue;
+  }
+}
+
+@layer variants {
+  h2.cl-demo {
+    color: green;
+  }
+}
+
+@layer utilities {
+  h2 {
+    color: red;
   }
 }

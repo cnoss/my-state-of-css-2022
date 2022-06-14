@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>WebTech // MI Master // State of CSS 2022</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/favicons/favicon.ico">
     <link rel="stylesheet" href="./assets/styles/reset.css"/>
     <link rel="stylesheet" href="./assets/styles/fonts.css"/>
     <link rel="stylesheet" href="./assets/styles/icons.css"/>
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="./assets/styles/base.css"/>
     <link rel="stylesheet" href="./assets/styles/layouts.css"/>
     <link rel="stylesheet" href="./assets/styles/components.css"/>
+
     <link rel="stylesheet" href="./assets/styles/example-cascade-layers.css"/>
     <link rel="stylesheet" href="./assets/styles/example-subgrid.css"/>
     <link rel="stylesheet" href="./assets/styles/example-aspect-ratio.css"/>
@@ -81,7 +83,7 @@
           </p>
 
           <p>
-            <a href="https://christiannoss.de">cn</a>// 06.2022
+            <a href="https://christiannoss.de">cn</a> // 06.2022
           </p>
         </div>
       </section>
@@ -189,7 +191,6 @@
   grid-template-columns: subgrid;
   grid-column: span 2;
 }</code></pre>
-  
           <div class="usable-indicator">
             <span class="icon">sentiment_neutral</span>
             <p>Das Feature ist bislang nur in <a href="https://caniuse.com/css-subgrid">Safari und Firefox</a> implementiert.</p>
@@ -389,6 +390,10 @@
   }
 }</code></pre>
 
+        <div class="comment">
+          <p>Als <code>container-name</code> können ausschließlich <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/custom-ident">custom-ident</a>s verwendet werden.
+        </div>
+        
         <div class="usable-indicator">
           <span class="icon">sentiment_dissatisfied</span>
           <p>Container Queries sind derzeit nur in <a href="https://caniuse.com/css-container-queries">Tech Previews verfügbar</a> und können daher nur für Experimente eingesetzt werden, sollen aber 2022 in den großen Browsern verfügbar sein. Man darf gespannt sein.</p>

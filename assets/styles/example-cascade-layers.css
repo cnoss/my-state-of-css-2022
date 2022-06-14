@@ -1,8 +1,8 @@
-@layer utilities, variants, theme;
+@layer theme, utilities, variants;
 
-@layer theme {
+/* @layer theme {
   h2 {
-    color: blue;
+    color: blue !important;
   }
 }
 
@@ -16,4 +16,4 @@
   h2 {
     color: red;
   }
-}
+} */
